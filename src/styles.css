@@ -430,6 +430,25 @@
   .film-frame.film-zoom { --film-feather: 0%; }
 }
 
+/* 3D garden transition (Journey) vignette & loader */
+.garden-3d-vignette {
+  background:
+    radial-gradient(ellipse 75% 70% at 50% 48%, transparent 54%, oklch(0.15 0.04 140 / 0.72) 100%),
+    linear-gradient(to bottom, oklch(0.18 0.05 60 / 0.68), transparent 22%, transparent 72%, oklch(0.15 0.04 140 / 0.72));
+}
+.loader-petal {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px 0;
+  background: linear-gradient(135deg, oklch(0.52 0.17 18), oklch(0.38 0.14 15));
+  box-shadow: 0 0 40px oklch(0.6 0.19 15 / 0.48);
+  animation: petal-spin 2.4s ease-in-out infinite;
+}
+@keyframes petal-spin {
+  0%, 100% { transform: rotate(45deg) scale(0.9); }
+  50% { transform: rotate(225deg) scale(1.08); }
+}
+
 /* falling gold petals and twinkling stars on the halaman inti */
 @keyframes petal-fall { from { transform: translateY(-12%); } to { transform: translateY(112vh); } }
 @keyframes petal-sway { 0%,100% { transform: translateX(calc(var(--sway, 24px) * -1)); } 50% { transform: translateX(var(--sway, 24px)); } }

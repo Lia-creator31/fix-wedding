@@ -6,7 +6,7 @@ import doorMask from "@/assets/arch-door-mask.webp.asset.json";
 import wallPortrait from "@/assets/nature-wall-rb-portrait.webp.asset.json";
 import wallLandscape from "@/assets/nature-wall-rb-landscape.webp.asset.json";
 import openBtn from "@/assets/open-btn.png.asset.json";
-import gardenView from "@/assets/garden-transition-poster.webp.asset.json";
+import gardenView from "@/assets/garden-bg.webp";
 import { PetalRain } from "./LiveOrnaments";
 import { ButterflyFlock } from "./Butterfly";
 import { WEDDING } from "@/lib/wedding";
@@ -94,7 +94,7 @@ export function Cover({ guest, onOpenStart, onOpened }: { guest: string; onOpenS
             >
               {/* the garden waiting behind the door */}
               <div className="arch-opening absolute inset-[1.5%] overflow-hidden" style={maskStyle}>
-                <img src={gardenView.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                <img src={gardenView} alt="" className="absolute inset-0 h-full w-full object-cover" />
                 <motion.div
                   className="arch-light absolute inset-0"
                   initial={{ opacity: 0.2 }}

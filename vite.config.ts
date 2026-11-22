@@ -9,6 +9,8 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+process.env["LOVABLE_PREVIEW_HOST"] ??= "id-preview--315509bd-fe1d-4f63-9fcf-76e2636fc1ae.lovable.app";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
